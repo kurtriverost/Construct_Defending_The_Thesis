@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Eventos_Win</name>
+    <events>
+        <event-block sid="301222991527200">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="833987356068344" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="295065483543044" type="AudioMenu">
+                    <param id="0" name="Audio file">Never Surrender - Win</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">6</param>
+                    <param id="1" name="Tag (optional)">&quot;win&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="231359666738654">
+            <conditions>
+                <condition behavior="Platform" id="2" name="Is on floor" sid="838866515582464" type="Mochila" />
+            </conditions>
+            <actions>
+                <action id="-8" name="Set angle" sid="783753438289133" type="Mochila">
+                    <param id="0" name="Angle">90</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="542642494604540">
+            <conditions>
+                <condition behavior="Platform" id="2" name="Is on floor" sid="437783190072507" type="Ladrón" />
+            </conditions>
+            <actions>
+                <action id="-8" name="Set angle" sid="828231573924023" type="Ladrón">
+                    <param id="0" name="Angle">332.219</param>
+                </action>
+                <action id="4" name="Set animation" sid="169110304788963" type="Ladrón">
+                    <param id="0" name="Animation">&quot;Dead&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="191515724014608">
+            <conditions>
+                <condition id="0" name="On clicked" sid="816246120793189" type="Menu_principal" />
+            </conditions>
+            <actions>
+                <action id="33" name="Stop all" sid="627412573308237" type="AudioMenu" />
+                <action id="-21" name="Reset global variables" sid="954582045516908" type="System" />
+                <action id="-2" name="Go to layout" sid="638729946519742" type="System">
+                    <param id="0" name="Layout">Starting_Game</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="577580681037413">
+            <conditions>
+                <condition id="0" name="On clicked" sid="527478880478592" type="Exit_4" />
+            </conditions>
+            <actions>
+                <action id="1" name="Close" sid="526321399030803" type="Browser" />
+            </actions>
+        </event-block>
+        <event-group description="" sid="131246168930280" title="Parte 1">
+            <sub-events>
+                <event-block sid="287027191983580">
+                    <conditions>
+                        <condition behavior="Platform" id="2" name="Is on floor" sid="644011588031362" type="Player_Menu" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="6" name="Set max fall speed" sid="894642877221035" type="Player_Menu">
+                            <param id="0" name="Max fall speed">120</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="238214587299223" type="System">
+                            <param id="0" name="Seconds">1</param>
+                        </action>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="575111551519161" type="Player_Menu">
+                            <param id="0" name="Control">1</param>
+                        </action>
+                        <action id="6" name="Set speed" sid="185335802488117" type="Player_Menu">
+                            <param id="0" name="Speed">12</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="387899607673542" type="Player_Menu">
+                            <param id="0" name="Animation">&quot;Run&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="748751440903919" title="Parte 2">
+            <sub-events>
+                <event-block sid="910976885672565">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="217509580570218" type="Player_Menu">
+                            <param id="0" name="Object">Mochila</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="2" name="Stop" sid="161557352366297" type="Player_Menu" />
+                        <action id="4" name="Set animation" sid="130556833748501" type="Player_Menu">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="774560281864347" type="System">
+                            <param id="0" name="Group name">&quot;Parte 1&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action behavior="Platform" id="1" name="Set max speed" sid="425811458946011" type="Player_Menu">
+                            <param id="0" name="Max Speed">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

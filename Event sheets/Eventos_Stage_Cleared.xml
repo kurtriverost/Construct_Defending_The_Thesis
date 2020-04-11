@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Eventos_Stage_Cleared</name>
+    <events>
+        <event-block sid="734444265826598">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="986833679895052" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="459934925845271" type="AudioMenu">
+                    <param id="0" name="Audio file">Dangerous Dungeon - Stage Cleared</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">6</param>
+                    <param id="1" name="Tag (optional)">&quot;stage_cleared&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="805322216600952">
+            <conditions>
+                <condition id="0" name="On clicked" sid="144508221912834" type="Next_stage_1" />
+            </conditions>
+            <actions>
+                <action id="-43" name="Go to next/previous layout" sid="986094911278615" type="System">
+                    <param id="0" name="Which">0</param>
+                </action>
+                <action id="33" name="Stop all" sid="830237814378301" type="AudioMenu" />
+            </actions>
+        </event-block>
+        <event-block sid="855138451426230">
+            <conditions>
+                <condition id="0" name="On clicked" sid="718486118703685" type="Exit_2" />
+            </conditions>
+            <actions>
+                <action id="1" name="Close" sid="555063486852392" type="Browser" />
+            </actions>
+        </event-block>
+        <event-block sid="376398190438366">
+            <conditions>
+                <condition behavior="Platform" id="2" name="Is on floor" sid="665253610866834" type="Player_Menu" />
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="7" name="Simulate control" sid="989824215698255" type="Player_Menu">
+                    <param id="0" name="Control">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="844389048821577" type="Player_Menu">
+                    <param id="0" name="Animation">&quot;Run&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="6" name="Set speed" sid="717111205084401" type="Player_Menu">
+                    <param id="0" name="Speed">12</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

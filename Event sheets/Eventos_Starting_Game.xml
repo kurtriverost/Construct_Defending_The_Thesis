@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Eventos_Starting_Game</name>
+    <events>
+        <event-block sid="413922598899004">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="116218562858278" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="115003685790405" type="AudioMenu">
+                    <param id="0" name="Audio file">Central City - Menu</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">1</param>
+                    <param id="1" name="Tag (optional)">&quot;menu&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="964217103139667">
+            <conditions>
+                <condition id="0" name="On clicked" sid="475673719255731" type="Start" />
+            </conditions>
+            <actions>
+                <action id="33" name="Stop all" sid="836712441793444" type="AudioMenu" />
+                <action id="-2" name="Go to layout" sid="216998317968389" type="System">
+                    <param id="0" name="Layout">Game</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="712460010763355">
+            <conditions>
+                <condition id="0" name="On clicked" sid="634287420893142" type="Exit_menu_starting_game" />
+            </conditions>
+            <actions>
+                <action id="1" name="Close" sid="107959683608079" type="Browser" />
+            </actions>
+        </event-block>
+        <event-block sid="886513744485751">
+            <conditions>
+                <condition behavior="Platform" id="2" name="Is on floor" sid="864526921014996" type="Ladrón" />
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="7" name="Simulate control" sid="871030082020339" type="Ladrón">
+                    <param id="0" name="Control">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="775239333900385" type="Ladrón">
+                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="6" name="Set speed" sid="500107173627188" type="Ladrón">
+                    <param id="0" name="Speed">14</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="450549964945032">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="975472350309755" type="Mochila">
+                    <param id="0" name="Object">Ladrón</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="7" name="Simulate control" sid="712921484053898" type="Mochila">
+                    <param id="0" name="Control">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="491497699759768">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="304054508861540" type="Player_Menu">
+                    <param id="0" name="Object">Ladrón</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Wait" sid="840938328858595" type="System">
+                    <param id="0" name="Seconds">0.5</param>
+                </action>
+                <action behavior="Platform" id="7" name="Simulate control" sid="424957260606537" type="Player_Menu">
+                    <param id="0" name="Control">2</param>
+                </action>
+                <action id="4" name="Set animation" sid="286047994045850" type="Player_Menu">
+                    <param id="0" name="Animation">&quot;Surprise&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="467360235446159">
+            <conditions>
+                <condition behavior="Platform" id="2" name="Is on floor" sid="803550356443823" type="Player_Menu" />
+            </conditions>
+            <actions>
+                <action id="-16" name="Wait" sid="895066234083429" type="System">
+                    <param id="0" name="Seconds">1.9</param>
+                </action>
+                <action behavior="Platform" id="7" name="Simulate control" sid="860257583180553" type="Player_Menu">
+                    <param id="0" name="Control">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="832442288442636" type="Player_Menu">
+                    <param id="0" name="Animation">&quot;Run&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="6" name="Set speed" sid="110308622473846" type="Player_Menu">
+                    <param id="0" name="Speed">12</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="233350989992400">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="121739661594062" type="System">
+                    <param id="0" name="Interval (seconds)">2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Set opacity" sid="797471244394168" type="SpriteFont2_press_start">
+                    <param id="0" name="Opacity">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="339150725144354">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="558524150716594" type="System">
+                    <param id="0" name="Interval (seconds)">2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Wait" sid="930461217368199" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="272788561043794" type="SpriteFont2_press_start">
+                    <param id="0" name="Opacity">100</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
